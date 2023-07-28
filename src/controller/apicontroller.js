@@ -21,7 +21,13 @@ const recibir = (req, res) => {
         var changes = (entry["changes"])[0];
         var value = changes["value"];
         var objetoMensaje = value["messages"];
-        console.log(objetoMensaje);
+        // console.log(objetoMensaje);
+
+        var messages = objetoMensaje[0];
+        var number = messages["from"];
+
+        console.log("Enviado desde: "+ number);
+
         res.send("EVENT_RECEIVED");
     } catch (e) {
         console.log(e);
