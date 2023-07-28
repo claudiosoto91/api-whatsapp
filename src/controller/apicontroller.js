@@ -4,7 +4,7 @@ const verificar = ( req, res ) => {
         var token = req.query["hub.verify_token"];
         var challenge = req.query["hub.challenge"];
 
-        if ( challenge != null && token!= null && token == tokenprueba ) {
+        if ( challenge != null && token != null && token == tokenprueba ) {
             res.send(challenge);
         }else{
             res.status(400).send();
@@ -12,7 +12,6 @@ const verificar = ( req, res ) => {
     } catch (e) {
         res.status(400).send();
     }
-    res.send("Verificado");
 }
 
 const recibir = (req, res) => {
