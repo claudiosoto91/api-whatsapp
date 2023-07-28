@@ -1,4 +1,4 @@
-const EnviarMensaje = require("../service/apiservice");
+const enviarMensaje = require("../service/apiservice");
 
 const verificar = (req, res) => {
     try {
@@ -29,8 +29,8 @@ const recibir = (req, res) => {
         var texto = messages["text"]["body"];
         var number = messages["from"];
 
-        console.log("Enviado desde : "+ number + "El texto es: "+ texto);
-        EnviarMensaje.EnviarMensajeWhatsApp(texto, number);
+        console.log("Enviado desde : "+ number + " El texto es: "+ texto);
+        enviarMensaje.EnviarMensajeWhatsApp(texto, number);
 
         res.send("EVENT_RECEIVED");
     } catch (e) {
