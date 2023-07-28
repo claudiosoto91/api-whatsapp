@@ -9,6 +9,7 @@ const verificar = ( req, res ) => {
         }else{
             res.status(400).send();
         }
+        console.log(req);
     } catch (e) {
         res.status(400).send();
     }
