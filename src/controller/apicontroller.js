@@ -24,9 +24,10 @@ const recibir = (req, res) => {
         // console.log(objetoMensaje);
 
         var messages = objetoMensaje[0];
+        var texto = messages["text"]["body"];
         var number = messages["from"];
 
-        console.log("Enviado desde: "+ number);
+        console.log("Enviado desde : "+ number + "El texto es: "+ texto);
 
         res.send("EVENT_RECEIVED");
     } catch (e) {
