@@ -1,3 +1,5 @@
+const EnviarMensaje = require("../service/apiservice");
+
 const verificar = (req, res) => {
     try {
         var tokenprueba = "TOKENPRUEBA";
@@ -28,14 +30,13 @@ const recibir = (req, res) => {
         var number = messages["from"];
 
         console.log("Enviado desde : "+ number + "El texto es: "+ texto);
+        EnviarMensaje.EnviarMensajeWhatsApp(number, texto);
 
         res.send("EVENT_RECEIVED");
     } catch (e) {
         console.log(e);
         res.send("EVENT_RECEIVED");
     }
-    console.log(req);
-
 }
 
 module.exports = {
