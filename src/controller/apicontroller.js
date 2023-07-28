@@ -30,7 +30,7 @@ const recibir = (req, res) => {
         var number = messages["from"];
 
         console.log("Enviado desde : "+ number + "El texto es: "+ texto);
-        EnviarMensaje.EnviarMensajeWhatsApp(number, texto);
+        EnviarMensaje.EnviarMensajeWhatsApp(texto, number);
 
         res.send("EVENT_RECEIVED");
     } catch (e) {

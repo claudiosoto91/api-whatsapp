@@ -19,7 +19,7 @@ function EnviarMensajeWhatsApp(texto, number) {
     body: data,
     headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer EAAKyP19gF84BO5D8ZB28iSOddd2Iiiqkyl8rST8QwiQMYCKjiQl86o7MisLs9EPnW6Jl2b8FWRGSHaa88rPnE2HuG5oRqlt9maJcGdQmvnqqiqc0mVKTkDDJrEDn46k6WjBov9Ak1ImywAOCPUUQYzlYBPdeUVoqyYFiL7UiPtgZBvRrDm25R84uO0mqqODB21ZC8NAbzCZBxdiy"
+        Authorization: "Bearer EAAKyP19gF84BO5D8ZB28iSOddd2Iiiqkyl8rST8QwiQMYCKjiQl86o7MisLs9EPnW6Jl2b8FWRGSHaa88rPnE2HuG5oRqlt9maJcGdQmvnqqiqc0mVKTkDDJrEDn46k6WjBov9Ak1ImywAOCPUUQYzlYBPdeUVoqyYFiL7UiPtgZBvRrDm25R84uO0mqqODB21ZC8NAbzCZBxdiy"
     }
   };
 
