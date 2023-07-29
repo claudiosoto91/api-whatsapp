@@ -3,6 +3,7 @@ const https = require("https");
 function EnviarMensajeWhatsApp(texto, number) {
 
   texto = texto.toLowerCase();
+  number = number.split(2);
 
   if ( texto.includes("hola") ) {
     var data = JSON.stringify({
