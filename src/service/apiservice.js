@@ -3,13 +3,13 @@ const https = require("https");
 function EnviarMensajeWhatsApp(texto, number) {
   texto = texto.toLowerCase();
   let numeroString = number.toString();
-  let numeroSinNueve = numeroString.replace(/9/g, "");
+  let numeroSinPrimerNueve = numeroString.replace('9', '');
 
   if (texto.includes("hola")) {
     var data = JSON.stringify({
       messaging_product: "whatsapp",
       recipient_type: "individual",
-      to: numeroSinNueve,
+      to: numeroSinPrimerNueve,
       type: "text",
       text: {
         preview_url: false,
@@ -20,7 +20,7 @@ function EnviarMensajeWhatsApp(texto, number) {
     var data = JSON.stringify({
       messaging_product: "whatsapp",
       recipient_type: "individual",
-      to: numeroSinNueve,
+      to: numeroSinPrimerNueve,
       type: "text",
       text: {
         preview_url: false,
