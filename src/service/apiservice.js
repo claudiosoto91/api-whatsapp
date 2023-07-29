@@ -3,7 +3,7 @@ const https = require("https");
 function EnviarMensajeWhatsApp(texto, number) {
   texto = texto.toLowerCase();
   let numeroString = number.toString();
-  let numeroSinPrimerNueve = numeroString.replace('9', '');
+  let numeroSinPrimerNueve = numeroString.replace("9", "");
 
   if (texto.includes("hola")) {
     var data = JSON.stringify({
@@ -14,6 +14,17 @@ function EnviarMensajeWhatsApp(texto, number) {
       text: {
         preview_url: false,
         body: "Hola, Como estas?, Bienvenido.",
+      },
+    });
+  } else if (texto == "1") {
+    var data = JSON.stringify({
+      messaging_product: "whatsapp",
+      recipient_type: "individual",
+      to: numeroSinPrimerNueve,
+      type: "text",
+      text: {
+        preview_url: false,
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl tellus, scelerisque tempus consequat ac, luctus rutrum tortor. Aliquam posuere nulla ante, vitae semper ipsum ornare ac. In elementum nulla vel imperdiet tempor. Sed ipsum magna, tincidunt in gravida ut, convallis in neque. Integer lobortis ipsum id magna porta rhoncus. Quisque nec felis eget sapien semper pharetra vel in orci. Praesent vel maximus tellus, id varius turpis. ",
       },
     });
   } else {
