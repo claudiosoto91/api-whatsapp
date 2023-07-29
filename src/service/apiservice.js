@@ -31,7 +31,7 @@ function EnviarMensajeWhatsApp(texto, number) {
     var data = JSON.stringify({
       messaging_product: "whatsapp",
       recipient_type: "individual",
-      to: "543814596629",
+      to: numeroSinPrimerNueve,
       type: "location",
       location: {
         latitude: "-26.8139997",
@@ -40,7 +40,51 @@ function EnviarMensajeWhatsApp(texto, number) {
         address: "Av. Belgrano 2210",
       },
     });
-  } else {
+  } else if (texto == "3") {
+    var data = JSON.stringify({
+      messaging_product: "whatsapp",
+      recipient_type: "individual",
+      to: numeroSinPrimerNueve,
+      type: "document",
+      document: {
+        link: "https://eqpro.es/wp-content/uploads/2018/11/Ejemplo.pdf",
+        caption: "Ejemplo de descarga por whatsapp de un archivo .pdf",
+      },
+    });
+  } else if (texto == "4") {
+    var data = JSON.stringify({
+      messaging_product: "whatsapp",
+      recipient_type: "individual",
+      to: numeroSinPrimerNueve,
+      type: "document",
+      document: {
+        link: "https://eqpro.es/wp-content/uploads/2018/11/Ejemplo.pdf",
+        caption: "Ejemplo de descarga por whatsapp de un archivo .pdf",
+      },
+    });
+  } else if (texto == "5") {
+    var data = JSON.stringify({
+      messaging_product: "whatsapp",
+      recipient_type: "individual",
+      to: numeroSinPrimerNueve,
+      type: "video",
+      video: {
+        link: "https://download.samplelib.com/mp4/sample-5s.mp4",
+        caption: "Ejemplo de envio de video",
+      },
+    });
+  }else if (texto == "6") {
+    var data = JSON.stringify({
+      messaging_product: "whatsapp",
+      recipient_type: "individual",
+      to: numeroSinPrimerNueve,
+      type: "text",
+      text: {
+        preview_url: false,
+        body: "Hola! En breve alguien del equipo se contactará contigo.",
+      },
+    });
+  }  else {
     var data = JSON.stringify({
       messaging_product: "whatsapp",
       recipient_type: "individual",
