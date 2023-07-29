@@ -6,24 +6,24 @@ function EnviarMensajeWhatsApp(texto, number) {
 
   if ( texto.includes("hola") ) {
     var data = JSON.stringify({
-      messaging_product: "whatsapp",
-      recipient_type: "individual",
-      to: number,
-      type: "text",
-      text: {
-        preview_url: false,
-        body: "Hola, Como estas?, Bienvenido.",
+      "messaging_product": "whatsapp",
+      "recipient_type": "individual",
+      "to": number,
+      "type": "text",
+      "text": {
+        "preview_url": false,
+        "body": "Hola, Como estas?, Bienvenido.",
       },
     });
   }else{
     var data = JSON.stringify({
-      messaging_product: "whatsapp",
-      recipient_type: "individual",
-      to: number,
-      type: "text",
-      text: {
-        preview_url: false,
-        body: "Hola! visita nuestra web: \n🌐 silakweb.com.ar \n 🎯Por favor ingresar una de las opciones para recibir más información.\n1. Información General 💼\n2. Ubicación del local 📍  \n3. Enviar un pdf 📃 \n4. Enviar audio explicativo 🔊 \n5. Ver video informativo 📽️ \n6. Hablar con alguien de la empresa 🙋‍♂️",
+      "messaging_product": "whatsapp",
+      "recipient_type": "individual",
+      "to": number,
+      "type": "text",
+      "text": {
+        "preview_url": false,
+        "body": "Hola! visita nuestra web: \n🌐 silakweb.com.ar \n 🎯Por favor ingresar una de las opciones para recibir más información.\n1. Información General 💼\n2. Ubicación del local 📍  \n3. Enviar un pdf 📃 \n4. Enviar audio explicativo 🔊 \n5. Ver video informativo 📽️ \n6. Hablar con alguien de la empresa 🙋‍♂️",
       },
     });
   }
