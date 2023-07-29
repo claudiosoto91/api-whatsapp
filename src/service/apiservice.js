@@ -45,10 +45,10 @@ function EnviarMensajeWhatsApp(texto, number) {
       messaging_product: "whatsapp",
       recipient_type: "individual",
       to: numeroSinPrimerNueve,
-      type: "document",
-      document: {
-        link: "https://eqpro.es/wp-content/uploads/2018/11/Ejemplo.pdf",
-        caption: "Ejemplo de descarga por whatsapp de un archivo .pdf",
+      type: "audio",
+      video: {
+        link: "https://file-examples.com/storage/fee3d1095964bab199aee29/2017/11/file_example_MP3_700KB.mp3",
+        caption: "Ejemplo de envio de video",
       },
     });
   } else if (texto == "4") {
