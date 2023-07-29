@@ -40,18 +40,18 @@ function EnviarMensajeWhatsApp(texto, number) {
         address: "Av. Belgrano 2210",
       },
     });
-  } else if (texto == "3") {
+  } else if (texto == "4") {
     var data = JSON.stringify({
       messaging_product: "whatsapp",
       recipient_type: "individual",
       to: numeroSinPrimerNueve,
       type: "audio",
       video: {
-        link: "https://file-examples.com/storage/fee3d1095964bab199aee29/2017/11/file_example_MP3_700KB.mp3",
+        link: "http://www.sonidosmp3gratis.com/sounds/ringtones-super-mario-bros.mp3",
         caption: "Ejemplo de envio de video",
       },
     });
-  } else if (texto == "4") {
+  } else if (texto == "3") {
     var data = JSON.stringify({
       messaging_product: "whatsapp",
       recipient_type: "individual",
