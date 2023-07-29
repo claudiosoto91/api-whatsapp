@@ -28,6 +28,7 @@ const recibir = (req, res) => {
       var texto = messages["text"]["body"];
       var number = messages["from"];
 
+      console.log("Numero es: ". number);
       enviarMensaje.EnviarMensajeWhatsApp(texto, number);
     }
 
