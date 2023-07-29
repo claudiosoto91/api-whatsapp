@@ -2,7 +2,7 @@ const https = require("https");
 
 function EnviarMensajeWhatsApp(texto, number) {
   texto = texto.toLowerCase();
-  let numeroString = number;
+  let numeroString = number.toString();
   let numeroSinNueve = numeroString.replace(/9/g, "");
 
   if (texto.includes("hola")) {
