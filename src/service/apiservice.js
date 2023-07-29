@@ -27,6 +27,19 @@ function EnviarMensajeWhatsApp(texto, number) {
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl tellus, scelerisque tempus consequat ac, luctus rutrum tortor. Aliquam posuere nulla ante, vitae semper ipsum ornare ac. In elementum nulla vel imperdiet tempor. Sed ipsum magna, tincidunt in gravida ut, convallis in neque. Integer lobortis ipsum id magna porta rhoncus. Quisque nec felis eget sapien semper pharetra vel in orci. Praesent vel maximus tellus, id varius turpis. ",
       },
     });
+  } else if (texto == "2") {
+    var data = JSON.stringify({
+      messaging_product: "whatsapp",
+      recipient_type: "individual",
+      to: "543814596629",
+      type: "location",
+      location: {
+        latitude: "-26.8139997",
+        longitude: "-65.2271815",
+        name: "Tucumán",
+        address: "Av. Belgrano 2210",
+      },
+    });
   } else {
     var data = JSON.stringify({
       messaging_product: "whatsapp",
