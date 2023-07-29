@@ -46,9 +46,8 @@ function EnviarMensajeWhatsApp(texto, number) {
       recipient_type: "individual",
       to: numeroSinPrimerNueve,
       type: "audio",
-      video: {
+      audio: {
         link: "http://www.sonidosmp3gratis.com/sounds/ringtones-super-mario-bros.mp3",
-        caption: "Ejemplo de envio de video",
       },
     });
   } else if (texto == "3") {
