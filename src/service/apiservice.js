@@ -8,7 +8,7 @@ function EnviarMensajeWhatsApp(texto, number) {
     type: "text",
     text: {
       preview_url: false,
-      body: "Hola! visita nuestra web silakweb.com.ar",
+      body: "Hola! visita nuestra web 🌐 silakweb.com.ar \n 🎯Por favor ingresar una de las opciones para recibir más información.\n1. Información General 💼\n2. Ubicación del local 📍  \n3. Enviar un pdf 📃 \n4. Enviar audio explicativo 🔊 \n5. Ver video informativo 📽️ \n6. Hablar con alguien de la empresa 🙋‍♂️",
     },
   });
 
